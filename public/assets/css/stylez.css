@@ -1,0 +1,57 @@
+#content{
+  display:none;
+
+}
+.preloader{
+  margin-top: 25%;
+}
+.slider1{
+  padding: 0 25% 0 25%;
+  background: #c79239;
+}
+.slider2{
+  padding: 0 25% 0 25%;
+  background: #4763c9;
+}
+.slider3{
+  padding: 0 25% 0 25%;
+  background: #ad422f;
+}
+.reg_div{
+  width:100%;
+  height:auto;
+  margin:0;
+  padding: 3% 25% 20% 25%;
+  background: #5e81a2;
+}
+.error_msg{
+  color:#f03e3e;
+  float: left;
+}
+.error_div{
+  width:500px;
+  height:auto;
+  background: pink;
+  border: 1px solid red;
+  border-radius: 5px;
+  color: red;
+  font-family: arial;
+  font-size: 20px;
+  padding: 5px;
+  margin-bottom: -50px;
+}
+.maincontent_div{
+  background: #02486d;
+  width:100%;
+  margin: 0;
+  padding: 5% 15% 10% 15%;
+}
+.div_white{
+  background: #e4ecf0;
+  width:100%;
+  height:auto;
+  padding: 0% 0 10% 0;
+}
+.nd_span{
+  color: red;
+}
