@@ -13,8 +13,9 @@
         <h4>SELF-EMPLOYED (SE)</h4>
       </td>
     </tr>
-   @foreach ($option as $res)
-       @if ($res->USERID >= 1)
+   
+       @if ($coption >= 1)
+       @foreach ($option as $res)
        <tr>
         <td align="right" width="250px">
           <b>Profession/Business:</b>
@@ -76,11 +77,12 @@
       </tr>
       <tr>
         <td colspan="4" align="center">
-          <a class="btn btn-primary" href="SSSFORM/ps.edit.php" onclick="document.location='sssform/sss-form.php'" style="width: 239px;margin-bottom: 29px;">
+          <a class="btn btn-primary" href="edit-proffession" onclick="document.location='sssform/sss-form.php'" style="width: 239px;margin-bottom: 29px;">
             EDIT
           </a>
         </td>
       </tr>
+      @endforeach
        @else
           <tr>
             <td align="right" width="250px">
@@ -136,7 +138,7 @@
             </td>
           </tr>
        @endif
-   @endforeach
+   
     </table>
       <!-- =============================slider 2 end========================== -->
     

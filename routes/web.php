@@ -28,3 +28,11 @@ Route::get('proffession', 'App\Http\Controllers\mainController@designation');
 Route::post('checklogin', 'App\Http\Controllers\loginController@checkLogin');
 Route::get('logout', 'App\Http\Controllers\loginController@logout');
 // Auth::routes();
+Route::get('edit-personaldata', 'App\Http\Controllers\mainController@editpdata');
+Route::get('edit-beneficiaries', 'App\Http\Controllers\mainController@editbenefit');
+Route::get('edit-proffession', 'App\Http\Controllers\mainController@editdesignation');
+
+//Users Functions
+Route::post('set-personaldata', 'App\Http\Controllers\userController@editpdata');
+Route::post('set-beneficiaries', 'App\Http\Controllers\userController@editbenefit');
+Route::post('set-proffession', 'App\Http\Controllers\userController@editdesignation');

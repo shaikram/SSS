@@ -13,8 +13,9 @@
         <h4>SPOUSE DATA</h4>
       </td>
     </tr>
+    
+    @if ($cspouse >= 1)
     @foreach ($spouse as $res)
-    @if ($res->userid >= 1)
       <tr>
         <td align="right" width="250px">
           <b>Spouse Name:</b>
@@ -31,6 +32,7 @@
           {{ date('F d, Y', strtotime($res->bdate)) }}
         </td>
       </tr>
+      @endforeach
     @else
       <tr>
         <td align="right" width="250px">
@@ -49,7 +51,7 @@
         </td>
       </tr>
     @endif
-    @endforeach
+    
 
     <tr>
       <td colspan="4" align="center">
@@ -59,8 +61,9 @@
     @php
         $a = 1;
     @endphp
-    @foreach ($child as $res)
-        @if ($res->userid >= 1)
+    
+        @if ($cchild >= 1)
+        @foreach ($child as $res)
           <tr>
             <td align="right" width="250px">
               <b>Child Name {{ $a }}:</b>
@@ -80,6 +83,7 @@
           @php
             $a++;
           @endphp
+          @endforeach
         @else
         <tr>
           <td align="right" width="250px">
@@ -99,7 +103,7 @@
         </tr>
         
         @endif
-    @endforeach
+    
 
    
     
@@ -112,8 +116,9 @@
     @php
         $b = 1;
     @endphp
-    @foreach ($other as $res)
-        @if ($res->userid >= 1)
+    
+        @if ($cother >= 1)
+        @foreach ($other as $res)
           <tr>
             <td align="right" width="250px">
               <b>Other Name {{ $b }}:</b>
@@ -133,6 +138,7 @@
         @php
           $b++;
         @endphp
+        @endforeach
         @else
           <tr>
             <td align="right" width="250px">
@@ -151,7 +157,7 @@
             </td>
           </tr>
         @endif
-    @endforeach
+    
 
     
     <tr>
@@ -160,13 +166,15 @@
     <tr>
       <td colspan="4"></td>
     </tr>
+    @if ($cspouse >= 1 || $cchild >= 1 || $cother >= 1)
     <tr>
       <td colspan="4" align="center">
-        <a class="btn btn-primary" href="SSSFORM/be.edit.php" onclick="document.location='sssform/sss-form.php'" style="width: 239px;margin-bottom: 29px;">
+        <a class="btn btn-primary" href="edit-beneficiaries" onclick="document.location='sssform/sss-form.php'" style="width: 239px;margin-bottom: 29px;">
           EDIT
         </a>
       </td>
     </tr>
+    @endif
     </table>
       <!-- =============================slider 2 end========================== -->
     

@@ -1,4 +1,4 @@
-@foreach ($pdata as $res)
+
 <div class="maincontent_div">
   <div class="div_white">
     <!-- =====================slider 1=============================== -->
@@ -17,7 +17,8 @@
         <tr>
           <td colspan="4"></td>
         </tr>
-        @if ($res->USERID >= 1)
+        @if ($cdata == 1)
+        @foreach ($pdata as $res)
         <tr>
           <td width="110px" align="right"><b>Name:</b></td>
           <td colspan="3" style="padding-left:5px;">
@@ -94,6 +95,7 @@
             {{ $res->TELNO }}
           </td>
         </tr>
+        @endforeach
       @else
         <tr>
           <td width="110px" align="right"><b>Name:</b></td>
@@ -191,4 +193,4 @@
   
   </div>
 </div>
-@endforeach
+

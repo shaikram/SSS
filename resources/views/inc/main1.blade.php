@@ -1,4 +1,4 @@
-@foreach ($pdata as $res)
+
 <!-- =====================slider 1=============================== -->
 <table width="100%" height="auto" class="swiper-slide">
     <tr>
@@ -21,7 +21,8 @@
   <tr>
     <td colspan="4"></td>
   </tr>
-  @if ($res->USERID >= 1)
+  @if ($cdata == 1)
+    @foreach ($pdata as $res)
       <tr>
         <td width="110px" align="right"><b>Name:</b></td>
         <td colspan="3" style="padding-left:5px;">
@@ -106,11 +107,12 @@
       </tr>
       <tr>
         <td colspan="5" align="center">
-          <a class="btn btn-primary" href="SSSFORM/pd.edit.php" onclick="document.location='sssform/sss-form.php'" style="width: 239px;margin-bottom: 29px;">
+          <a class="btn btn-primary" href="edit-personaldata" onclick="document.location='sssform/sss-form.php'" style="width: 239px;margin-bottom: 29px;">
             EDIT
           </a>
         </td>
       </tr>
+      @endforeach
   @else
     <tr>
       <td width="110px" align="right"><b>Name:</b></td>
@@ -191,5 +193,5 @@
     </tr>
     @endif
   </table>
-  @endforeach
+  
   
